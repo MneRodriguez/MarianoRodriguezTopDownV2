@@ -7,7 +7,7 @@ public class ControlJgdr : MonoBehaviour
     public Camera cam;
 
     public Rigidbody2D rbJgdr;
-    public float velMovto = 10f;
+    public float velMovto = 1.5f;
 
     void Start()
     {
