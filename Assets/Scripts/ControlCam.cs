@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class ControlCam : MonoBehaviour
 {
-    public GameObject Jugador;
-    public Vector2 offset;
+    public GameObject Jugador;    
+    public Vector3 offset;
     public float movtoCam = 0.5f;
 
     void Start()
     {
-        offset = transform.position + Jugador.transform.position;
+        offset = transform.position - Jugador.transform.position;
+                
     }
 
     
     void Update()
     {
-        Vector2 posDeCam = Jugador.transform.TransformPoint(new Vector3(-1f, -1f, -10f));
-        transform.position = Vector2.SmoothDamp(transform.position, posDeCam, ref offset, movtoCam);
+        Vector3 posDeCam = new Vector3(Jugador.transform.position.x, Jugador.transform.position.y, transform.position.z);
+                
+        // Suavizado del movimiento de la cámara
+        transform.position = Vector3.SmoothDamp(transform.position, posDeCam, ref offset, movtoCam);
+                
     }
 }
