@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuRestart.unity
     guid: 4cc7c7822e34a4b4c8d657af607cce87
+  - enabled: 1
+    path: Assets/Scenes/MenuVictoria.unity
+    guid: d68ab00a158e2044ca6eff73ed4f7207
   m_configObjects: {}

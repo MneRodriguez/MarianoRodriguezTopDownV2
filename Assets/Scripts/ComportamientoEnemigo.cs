@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ComportamientoEnemigo : MonoBehaviour
 {
     public GameObject Enem;
     public Rigidbody2D rbEnem;
+
+    
     void Start()
     {
         rbEnem = GetComponent<Rigidbody2D>();
@@ -23,6 +26,13 @@ public class ComportamientoEnemigo : MonoBehaviour
         {
             ContadorScore.valorScore += 1;
             Destroy(gameObject);
+
+            if (ContadorScore.valorScore == 3)
+            {
+                SceneManager.LoadScene("MenuVictoria");
+            }
         }
+                
     }
+        
 }
