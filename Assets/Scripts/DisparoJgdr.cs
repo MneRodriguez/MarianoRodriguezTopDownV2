@@ -8,6 +8,7 @@ public class DisparoJgdr : MonoBehaviour
     public GameObject prefabBalaJgdr;
 
     public float velDesplzBalaJgdr = 20f;
+    public float duracionBala = 1.5f;
 
     void Start()
     {
@@ -31,6 +32,7 @@ public class DisparoJgdr : MonoBehaviour
         Rigidbody2D rbBala = balaJgdr.GetComponent<Rigidbody2D>();
         rbBala.AddForce(zonaSpawnDelDisparo.right * velDesplzBalaJgdr, ForceMode2D.Impulse);
 
-        //Instantiate(prefabBalaJgdr, zonaSpawnDelDisparo.position, zonaSpawnDelDisparo.rotation);
+        Destroy(balaJgdr, duracionBala);
+        
     }
 }
