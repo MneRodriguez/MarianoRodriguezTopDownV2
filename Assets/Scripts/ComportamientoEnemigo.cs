@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ComportamientoEnemigo : MonoBehaviour
 {
-    
+    public GameObject Enem;
     public Rigidbody2D rbEnem;
     void Start()
     {
@@ -21,7 +21,8 @@ public class ComportamientoEnemigo : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("BalaJugador"))
         {
-            Destroy(rbEnem);
+            ContadorScore.valorScore += 1;
+            Destroy(gameObject);
         }
     }
 }

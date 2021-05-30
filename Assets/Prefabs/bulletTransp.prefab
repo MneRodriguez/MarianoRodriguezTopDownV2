@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5800235370602882505}
   - component: {fileID: 8246055131891269201}
   - component: {fileID: 8043299326112898884}
+  - component: {fileID: 4684306858723512633}
   m_Layer: 0
   m_Name: bulletTransp
   m_TagString: BalaJugador
@@ -130,3 +131,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5966902, y: 0.90240216}
   m_EdgeRadius: 0
+--- !u!114 &4684306858723512633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177001208109628556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5714a31e3b1a0db44b83442873db4453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CantEnems: 3
+  contadorEnemsAbatidos: 0
