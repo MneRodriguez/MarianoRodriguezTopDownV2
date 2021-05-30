@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ControlJgdr : MonoBehaviour
 {
@@ -35,5 +36,13 @@ public class ControlJgdr : MonoBehaviour
         var direccion = Input.mousePosition - posDeCam;
         var angulo = Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angulo, Vector3.forward);
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemigo"))
+        {
+            SceneManager.LoadScene("MenuRestart");
+        }
     }
 }

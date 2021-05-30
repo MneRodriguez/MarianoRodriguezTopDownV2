@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 453581529}
   - component: {fileID: 453581528}
   - component: {fileID: 453581530}
+  - component: {fileID: 453581532}
   - component: {fileID: 453581531}
   m_Layer: 0
   m_Name: Enem sprite
@@ -242,7 +243,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f445fc8dec711914e9d371dd30ad3ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjSpriteDelEnem: {fileID: 453581527}
+  rbEnem: {fileID: 453581532}
+--- !u!50 &453581532
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453581527}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,6 +702,7 @@ MonoBehaviour:
   prefabBalaJgdr: {fileID: 1177001208109628556, guid: 22f852baf1c45b9478f750251f3ca196,
     type: 3}
   velDesplzBalaJgdr: 20
+  duracionBala: 1.5
 --- !u!1 &1579968671
 GameObject:
   m_ObjectHideFlags: 0

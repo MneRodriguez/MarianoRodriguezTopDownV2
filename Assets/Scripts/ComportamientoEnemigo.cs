@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ComportamientoEnemigo : MonoBehaviour
 {
-    public GameObject ObjSpriteDelEnem;
+    
+    public Rigidbody2D rbEnem;
     void Start()
     {
-        ObjSpriteDelEnem = GetComponent<GameObject>();
+        rbEnem = GetComponent<Rigidbody2D>();
     }
 
     
@@ -20,7 +21,7 @@ public class ComportamientoEnemigo : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("BalaJugador"))
         {
-            Destroy(ObjSpriteDelEnem);
+            Destroy(rbEnem);
         }
     }
 }
