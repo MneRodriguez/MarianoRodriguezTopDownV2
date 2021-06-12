@@ -12,6 +12,8 @@ public class ComportamientoEnemigo : MonoBehaviour
     void Start()
     {
         rbEnem = GetComponent<Rigidbody2D>();
+
+        
     }
 
     
@@ -34,5 +36,7 @@ public class ComportamientoEnemigo : MonoBehaviour
         }
                 
     }
-        
+
+    
+
 }
